@@ -64,19 +64,19 @@ console.log(aeiouCounter("Hammer Time"));
  */
 
 
-/* function convertTimeFormat(str){
- 	
+function convertTimeFormat(str){
+ 	if (typeof str !== "number") {
+		return null;
+	};
 	var hours = Math.floor(str/60);
 	var mins = str % 60; 
 	return hours + ":" + mins;
-if (typeof str !== "number") {
-		return null;
-	}
+	
 	
 };
 
 console.log(convertTimeFormat("68"));
-*/
+
 
 //works everywhere else, just can't get npm test to register
 
@@ -124,6 +124,6 @@ module.exports = {
     firstReverse: reverseString,
     alphaOrder: makeAlphabet,
     vowelCount: aeiouCounter,
-    timeConvert: null,
+    timeConvert: convertTimeFormat,
     repeatString: repeat
 }
