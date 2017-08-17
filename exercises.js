@@ -64,6 +64,23 @@ console.log(aeiouCounter("Hammer Time"));
  */
 
 
+/* function convertTimeFormat(str){
+ 	
+	var hours = Math.floor(str/60);
+	var mins = str % 60; 
+	return hours + ":" + mins;
+if (typeof str !== "number") {
+		return null;
+	}
+	
+};
+
+console.log(convertTimeFormat("68"));
+*/
+
+//works everywhere else, just can't get npm test to register
+
+
 
  /** Function: repeatString
  * The function will take in two parameters and repeat a given string (first argument)
@@ -74,6 +91,20 @@ console.log(aeiouCounter("Hammer Time"));
  * i.e repeatString("money", 3) => "moneymoneymoney".
  */
 
+
+
+function repeat(str, num){
+	if (typeof str !== "string" && typeof num !== "number") {
+		return null;
+	};
+	if (num < 0) return "";
+	var result = "";
+	while (num > 1) {
+		if (num & 1) result += str;
+		num >>= 1, str += str;
+	}
+	return result + str;
+}
 
 /**
  * Below here we see a module.exports which is set to an object with a bunch of keys.
@@ -94,5 +125,5 @@ module.exports = {
     alphaOrder: makeAlphabet,
     vowelCount: aeiouCounter,
     timeConvert: null,
-    repeatString: null
+    repeatString: repeat
 }
