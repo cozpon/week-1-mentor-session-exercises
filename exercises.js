@@ -5,6 +5,14 @@
  * @return {string} reversed
  * ie: "cat" => "tac"
  */
+function reverseString(str) {
+    if (typeof str !== "string"){
+    	return null;
+    } else {
+    	return str.split("").reverse().join("");
+}
+};
+reverseString("hello");
 
  /** Function: alphaOrder
  * The function will take the str parameter being passed in and
@@ -13,6 +21,7 @@
  * @return {string} in alphabetical order
  * ie: "cake" => "acek"
  */
+
 
  /** Function: vowelCount
  * The function will take the str parameter being passed in and
@@ -56,8 +65,8 @@
  */
 
 module.exports = {
-    firstReverse: null,
-    alphaOrder: null,
+    firstReverse: reverseString,
+    alphaOrder: alphaOrder,
     vowelCount: null,
     timeConvert: null,
     repeatString: null
