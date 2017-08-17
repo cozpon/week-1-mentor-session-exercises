@@ -37,8 +37,21 @@ console.log(makeAlphabet("the quick brown fox jumped over the lazy dog"));
  * @return {number} count of vowels
  * ie: "oreo" => 3
  */
- //function vowelCount(str){
 
+ function aeiouCounter(str){
+ 	var vowelsCount = 0;
+ 	var string = str.toString();
+ 	if (typeof str !== "string"){
+ 		return null;
+ 	}
+ 	  for (var i = 0; i<= string.length -1; i++) {
+ 		if (string.charAt(i) === "a" || string.charAt(i) === "e" || string.charAt(i) === "i" || string.charAt(i) === "o" || string.charAt(i) === "u") {
+ 			vowelsCount +=1;
+ 		}
+ 	}
+ 		return vowelsCount;
+};
+console.log(aeiouCounter("Hammer Time"));
  
 
  /** Function: timeConvert
@@ -49,6 +62,8 @@ console.log(makeAlphabet("the quick brown fox jumped over the lazy dog"));
  * @return {string} as hours:minutes
  * ie: 68 => 1:8
  */
+
+
 
  /** Function: repeatString
  * The function will take in two parameters and repeat a given string (first argument)
@@ -77,7 +92,7 @@ console.log(makeAlphabet("the quick brown fox jumped over the lazy dog"));
 module.exports = {
     firstReverse: reverseString,
     alphaOrder: makeAlphabet,
-    vowelCount: null,
+    vowelCount: aeiouCounter,
     timeConvert: null,
     repeatString: null
 }
