@@ -12,7 +12,7 @@ function reverseString(str) {
     	return str.split("").reverse().join("");
 }
 };
-reverseString("hello");
+console.log(reverseString("hello"));
 
  /** Function: alphaOrder
  * The function will take the str parameter being passed in and
@@ -22,6 +22,13 @@ reverseString("hello");
  * ie: "cake" => "acek"
  */
 
+function makeAlphabet(str) {
+		if (typeof str === "string"){
+			return str.split("").sort().join("");
+		} else (typeof str !== "string")
+			return null;  
+};
+console.log(makeAlphabet("the quick brown fox jumped over the lazy dog"));
 
  /** Function: vowelCount
  * The function will take the str parameter being passed in and
@@ -30,6 +37,9 @@ reverseString("hello");
  * @return {number} count of vowels
  * ie: "oreo" => 3
  */
+ //function vowelCount(str){
+
+ 
 
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
@@ -66,7 +76,7 @@ reverseString("hello");
 
 module.exports = {
     firstReverse: reverseString,
-    alphaOrder: alphaOrder,
+    alphaOrder: makeAlphabet,
     vowelCount: null,
     timeConvert: null,
     repeatString: null
